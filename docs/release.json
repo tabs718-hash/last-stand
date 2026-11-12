@@ -1,0 +1,48 @@
+{
+  "version": "1.2.0",
+  "initialJavaScript": {
+    "bytes": 1188512,
+    "gzipBytes": 337884
+  },
+  "totalJavaScript": {
+    "bytes": 3483136,
+    "gzipBytes": 1185572
+  },
+  "assets": [
+    {
+      "path": "assets/cowboy.glb",
+      "bytes": 1611772,
+      "sha256": "07bfef927c2667f29e3ffb6b97f7cedaaa8aa24f160b147dabd1b65509a4cd61"
+    },
+    {
+      "path": "assets/revolver.glb",
+      "bytes": 436468,
+      "sha256": "6297b5b4648cf8a7c8c2374bdc6f0a710238ec380366e4206b6dee55aff19bd4"
+    },
+    {
+      "path": "assets/volcanic.glb",
+      "bytes": 328308,
+      "sha256": "53b7f4cbca01fc5f29ae3a8c10fa68182b87b9d65999b84c880cd08bd5d12f83"
+    },
+    {
+      "path": "assets/magnum.glb",
+      "bytes": 422656,
+      "sha256": "3a0790ae270882bcbefac7af5f0f84efa47b05306081e081c2066aa544d84f92"
+    },
+    {
+      "path": "assets/power-gun.glb",
+      "bytes": 470340,
+      "sha256": "b7a46ddbc8924e607a1f9d08a7bcf33b310f0c9903a611efe4356570a891c82d"
+    },
+    {
+      "path": "assets/hat.glb",
+      "bytes": 97252,
+      "sha256": "3c01fe50f6194c0958986f93ceae10d30ff3fd0df7e913a2f891cbe4ddb916f3"
+    },
+    {
+      "path": "assets/holster.glb",
+      "bytes": 161416,
+      "sha256": "259e3c4e23cf70b6ea9da6c0e3f0ffd01e8ea8ce3650d492c936141aa3cebae3"
+    }
+  ]
+}

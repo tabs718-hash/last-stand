@@ -1,0 +1,48 @@
+{
+  "../last-draw/node_modules/@dimforge/rapier3d-compat/rapier.mjs": {
+    "file": "assets/physics-vendor-DBjBuyhF.js",
+    "name": "physics-vendor",
+    "src": "../last-draw/node_modules/@dimforge/rapier3d-compat/rapier.mjs",
+    "isDynamicEntry": true
+  },
+  "_render-vendor-DAWJcxVS.js": {
+    "file": "assets/render-vendor-DAWJcxVS.js",
+    "name": "render-vendor",
+    "imports": [
+      "_three-vendor-BtDCM79E.js"
+    ]
+  },
+  "_three-vendor-BtDCM79E.js": {
+    "file": "assets/three-vendor-BtDCM79E.js",
+    "name": "three-vendor"
+  },
+  "index.html": {
+    "file": "assets/index-B-jonczC.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "imports": [
+      "_render-vendor-DAWJcxVS.js",
+      "_three-vendor-BtDCM79E.js"
+    ],
+    "dynamicImports": [
+      "../last-draw/node_modules/@dimforge/rapier3d-compat/rapier.mjs",
+      "src/core/GameEngine.ts"
+    ],
+    "css": [
+      "assets/index-QdLykew8.css"
+    ]
+  },
+  "src/core/GameEngine.ts": {
+    "file": "assets/GameEngine-D6Xir1XL.js",
+    "name": "GameEngine",
+    "src": "src/core/GameEngine.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "../last-draw/node_modules/@dimforge/rapier3d-compat/rapier.mjs",
+      "_three-vendor-BtDCM79E.js",
+      "_render-vendor-DAWJcxVS.js"
+    ]
+  }
+}

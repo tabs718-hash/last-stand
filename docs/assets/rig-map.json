@@ -1,0 +1,18 @@
+{
+  "Pelvis": "Pelvis",
+  "Abdomen": "Abdomen",
+  "Chest": "Chest",
+  "Head": "Head",
+  "Left thigh": "Left_thigh",
+  "Left shin": "Left_shin",
+  "Left foot": "Left_foot",
+  "Left upper arm": "Left_upper_arm",
+  "Left forearm": "Left_forearm",
+  "Left hand": "Left_hand",
+  "Right thigh": "Right_thigh",
+  "Right shin": "Right_shin",
+  "Right foot": "Right_foot",
+  "Right upper arm": "Right_upper_arm",
+  "Right forearm": "Right_forearm",
+  "Right hand": "Right_hand"
+}

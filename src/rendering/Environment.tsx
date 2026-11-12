@@ -1,0 +1,9 @@
+import {memo,useMemo,useEffect} from 'react';
+import {CanvasTexture,RepeatWrapping,SRGBColorSpace} from 'three';
+import {createStreet} from './StreetGeometry';
+function useSand(){
+ const texture=useMemo(()=>{const c=document.createElement('canvas');c.width=c.height=256;const ctx=c.getContext('2d')!;const data=ctx.createImageData(256,256);let seed=173;
+ for(let i=0;i<data.data.length;i+=4){seed=(Math.imul(seed,1664525)+1013904223)|0;const n=(seed>>>24)/255;data.data[i]=162+n*25;data.data[i+1]=140+n*22;data.data[i+2]=108+n*18;data.data[i+3]=255}ctx.putImageData(data,0,0);
+ const t=new CanvasTexture(c);t.wrapS=t.wrapT=RepeatWrapping;t.repeat.set(90,90);t.colorSpace=SRGBColorSpace;return t},[]);useEffect(()=>()=>texture.dispose(),[texture]);return texture;
+}
+export const Environment=memo(function Environment({distance=12}:{distance?:number}){const sand=useSand(),street=useMemo(createStreet,[]);useEffect(()=>()=>street.dispose(),[street]);return <><color attach="background" args={['#b9afa0']}/><fog attach="fog" args={['#b9afa0',18,65]}/><ambientLight intensity={1.1}/><hemisphereLight args={['#d8e2e7','#9b784e',1]}/><directionalLight position={[-7,10,8]} intensity={3} castShadow shadow-mapSize={[2048,2048]} shadow-camera-left={-18} shadow-camera-right={18} shadow-camera-top={18} shadow-camera-bottom={-18} shadow-bias={-.0003}/><mesh rotation={[-Math.PI/2,0,0]} receiveShadow><planeGeometry args={[200,200]}/><meshStandardMaterial map={sand} roughness={1}/></mesh><primitive object={street.group} dispose={null}/><mesh position={[0,.004,0]} rotation={[-Math.PI/2,0,0]}><ringGeometry args={[.65,.66,80]}/><meshBasicMaterial color="#756853"/></mesh><mesh position={[0,.004,distance]} rotation={[-Math.PI/2,0,0]}><ringGeometry args={[.65,.66,80]}/><meshBasicMaterial color="#756853"/></mesh>{[-1,1].map(s=><mesh key={s} position={[s*3,.003,5]} rotation={[-Math.PI/2,0,0]}><planeGeometry args={[.03,32]}/><meshBasicMaterial color="#9f8b6e"/></mesh>)}</>});
